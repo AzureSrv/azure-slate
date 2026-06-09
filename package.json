@@ -11,6 +11,9 @@
         "email": "me@azureagst.dev",
         "url": "https://azureagst.dev"
 	},
+    "scripts": {
+        "pkg": "zip -r dist/azure-slate.zip . -x dist/"
+    },
 	"gpm": {
         "type": "theme",
         "categories": [
