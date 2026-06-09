@@ -2,67 +2,73 @@
 	"name": "azure-slate",
 	"version": "1.0.1",
 	"demo": "https://ghost.estudiopatagon.com/slate",
-    "project_url": "https://estudiopatagon.com/projects/slate-for-ghost",
-    "engines": {
-        "ghost": ">=6.0.0"
-    },
+	"project_url": "https://estudiopatagon.com/projects/slate-for-ghost",
+	"engines": {
+		"ghost": ">=6.0.0"
+	},
 	"author": {
 		"name": "AzureAgst",
-        "email": "me@azureagst.dev",
-        "url": "https://azureagst.dev"
+		"email": "me@azureagst.dev",
+		"url": "https://azureagst.dev"
 	},
-    "scripts": {
-        "pkg": "zip -r dist/azure-slate.zip . -x dist/"
-    },
+    	"devDependencies": {
+		"sass": "^1.100.0"
+	},
+	"scripts": {
+        "dist": "npm run build:prod && npm run pkg",
+        "build:prod": "sass -q --no-source-map assets/scss/main.scss assets/dist/style.min.css",
+        "build:dev": "sass assets/scss/main.scss assets/dist/style.min.css",
+		"pkg": "zip -r dist/azure-slate.zip . -x dist/"
+	},
 	"gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Personal",
-            "Blog"
-        ]
-    },
+		"type": "theme",
+		"categories": [
+			"Minimal",
+			"Personal",
+			"Blog"
+		]
+	},
 	"config": {
-        "posts_per_page": 6,
-        "image_sizes": {
-            "thumbnail": {
-                "width": 120,
-                "height": 120
-            },
-            "medium": {
-                "width": 300,
-                "height": 300
-            },
-            "loop_classic": {
-                "width": 600,
-                "height": 450
-            },
-            "classic": {
-                "width": 1075
-            }
-        },
-        "card_assets": true,
-        "custom": {
-            "enable_about_me": {
-                "type": "boolean",
-                "default": true,
-                "description": "Display the About Me section on the homepage."
-            },
-            "enable_featured_post": {
-                "type": "boolean",
-                "default": true,
-                "description": "Display the latest featured post on the homepage."
-            },
-            "background_color": {
-                "type": "color",
-                "default": "#FAFAFA",
-                "description": "Default: #FAFAFA, used for the background color."
-            }         
-        }
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ]
+		"posts_per_page": 6,
+		"image_sizes": {
+			"thumbnail": {
+				"width": 120,
+				"height": 120
+			},
+			"medium": {
+				"width": 300,
+				"height": 300
+			},
+			"loop_classic": {
+				"width": 600,
+				"height": 450
+			},
+			"classic": {
+				"width": 1075
+			}
+		},
+		"card_assets": true,
+		"custom": {
+			"enable_about_me": {
+				"type": "boolean",
+				"default": true,
+				"description": "Display the About Me section on the homepage."
+			},
+			"enable_featured_post": {
+				"type": "boolean",
+				"default": true,
+				"description": "Display the latest featured post on the homepage."
+			},
+			"background_color": {
+				"type": "color",
+				"default": "#FAFAFA",
+				"description": "Default: #FAFAFA, used for the background color."
+			}
+		}
+	},
+	"keywords": [
+		"ghost",
+		"theme",
+		"ghost-theme"
+	]
 }
