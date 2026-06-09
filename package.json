@@ -1,5 +1,5 @@
 {
-	"name": "slate",
+	"name": "azure-slate",
 	"version": "1.0.1",
 	"demo": "https://ghost.estudiopatagon.com/slate",
     "project_url": "https://estudiopatagon.com/projects/slate-for-ghost",
@@ -7,9 +7,9 @@
         "ghost": ">=6.0.0"
     },
 	"author": {
-		"name": "EstudioPatagon",
-        "email": "admin@estudiopatagon.com",
-        "url": "https://estudiopatagon.com"
+		"name": "AzureAgst",
+        "email": "me@azureagst.dev",
+        "url": "https://azureagst.dev"
 	},
 	"gpm": {
         "type": "theme",
