@@ -36,7 +36,7 @@
   --epcl-titles-color: #292524;
   --epcl-text-color: #4e4e57;
   --epcl-black: #292524;
-  --epcl-background-color: #FAF2EA;
+  --epcl-background-color: #EEE;
   --epcl-border-color: #F2F2F2; /* General border color */
   --epcl-boxes-background-color: #fff; /* Used on boxes, example: sidebar widgets, single article box */
   --epcl-editor-boxes-bg-color: #fff; /* Used on editor boxes, example: single article box */
@@ -54,6 +54,31 @@
   --epcl-large-border-radius: 100px; /* Used to generate circles */
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --epcl-main-color: var(--ghost-accent-color);
+    --epcl-secondary-color: #FDFBF9;
+    --epcl-titles-color: #fff;
+    --epcl-text-color: #eee;
+    --epcl-black: #292524;
+    --epcl-background-color: #222;
+    --epcl-border-color: #222;
+    --epcl-boxes-background-color: #444;
+    --epcl-editor-boxes-bg-color: #fff;
+  }
+  .module-about form .inputbox {
+    background: #fff !important;
+  }
+  div.menu-mobile svg {
+    fill: #fff !important;
+  }
+  .kg-bookmark-card .kg-bookmark-container {
+    background-color: #eee !important;
+  }
+  .subscribe-form .description {
+    color: #ddd !important;
+  }
+}
 /* @end */
 /* @group Font Families */
 /* @end */
@@ -2175,7 +2200,7 @@ div.text p.has-background {
 div.text h1, div.text h2, div.text h3, div.text h4, div.text h5, div.text h6 {
   font-weight: 700;
   font-family: var(--epcl-title-font-family);
-  color: var(--epcl-black);
+  color: var(--epcl-text-color);
   letter-spacing: 0.5px;
 }
 div.text h1 {
@@ -2887,7 +2912,7 @@ body.page-template #wrapper {
 #header {
   position: relative;
   z-index: 99;
-  padding: 40px 0;
+  padding: 10px 0;
 }
 #header div.menu-mobile {
   display: none;
@@ -3584,6 +3609,15 @@ div.left-content {
 }
 .module-about form .inputbox {
   background: var(--epcl-boxes-background-color);
+}
+
+/* Module: Subpage Header */
+.module-subpage-header {
+  text-align: center;
+  margin: 0 20px;
+}
+.module-subpage-header .sp-header-text {
+  padding: 20px 0;
 }
 
 /* Featured Post */

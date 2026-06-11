@@ -11,19 +11,13 @@
 <link rel="shortcut icon" href="{{asset 'favicon.ico' }}">
 
 {{! Theme Styles }}
-
 <link href="{{asset 'dist/style.min.css' }}" type="text/css" rel="stylesheet">
-<link href="{{asset 'dist/plugins.min.css' }}" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
 
 {{> typography}}    
+{{> svg-icons}}
 
 {{!-- Custom Settings --}}
 <style>
-    :root{
-        {{#if @custom.background_color}}
-            --epcl-background-color: {{@custom.background_color}};
-        {{/if}}
-    }
     {{#get "tags" limit="100" }}
         {{#foreach tags visibility="public"}}
             {{#if accent_color}}

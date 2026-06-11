@@ -56,6 +56,17 @@
 
     {{!-- Theme Scripts --}}
     <script defer src="{{asset 'dist/scripts.min.js' }}"></script>
+    <script>
+        async function sharePost(url) {
+            if (navigator.share) {
+                await navigator.share({ url });
+            } else {
+                // fallback — copy to clipboard
+                await navigator.clipboard.writeText(url);
+                alert('Link copied to clipboard');
+            }
+        }
+    </script>
 
 
 </body>

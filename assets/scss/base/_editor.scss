@@ -25,7 +25,7 @@ div.text{
 	h1, h2, h3, h4, h5, h6{ 
         font-weight: 700;
         font-family: $title-font-family;
-        color: $black;
+        color: $text-color;
         letter-spacing: 0.5px;
     }
 	h1{ font-size: 44px; padding-top: $editor-base-unit * 0.62; margin-bottom: $editor-base-unit * 0.38; line-height: 1.3; }

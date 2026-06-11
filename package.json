@@ -18,7 +18,7 @@
         "dist": "npm run build:prod && npm run pkg",
         "build:prod": "sass -q --no-source-map assets/scss/main.scss assets/dist/style.min.css",
         "build:dev": "sass assets/scss/main.scss assets/dist/style.min.css",
-		"pkg": "zip -r dist/azure-slate.zip . -x dist/"
+		"pkg": "zip -r dist/azure-slate.zip . -x 'dist/*' 'node_modules/*' '.git/*'"
 	},
 	"gpm": {
 		"type": "theme",
@@ -58,11 +58,6 @@
 				"type": "boolean",
 				"default": true,
 				"description": "Display the latest featured post on the homepage."
-			},
-			"background_color": {
-				"type": "color",
-				"default": "#FAFAFA",
-				"description": "Default: #FAFAFA, used for the background color."
 			}
 		}
 	},

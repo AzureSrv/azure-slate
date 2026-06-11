@@ -19,7 +19,7 @@
     --epcl-titles-color: #292524;
     --epcl-text-color: #4e4e57; //#353844;
     --epcl-black: #292524;
-    --epcl-background-color: #FAF2EA;
+    --epcl-background-color: #EEE;
     --epcl-border-color: #F2F2F2; /* General border color */
     --epcl-boxes-background-color: #fff; /* Used on boxes, example: sidebar widgets, single article box */
     --epcl-editor-boxes-bg-color: #fff; /* Used on editor boxes, example: single article box */
@@ -38,6 +38,32 @@
     --epcl-small-border-radius: 5px; /* Used on small elements (like buttons) */
     --epcl-medium-border-radius: 10px; /* Used on medium elements (like boxes) */
     --epcl-large-border-radius: 100px; /* Used to generate circles */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --epcl-main-color: var(--ghost-accent-color);
+    --epcl-secondary-color: #FDFBF9;
+    --epcl-titles-color: #fff;
+    --epcl-text-color: #eee;
+    --epcl-black: #292524;
+    --epcl-background-color: #222;
+    --epcl-border-color: #222;
+    --epcl-boxes-background-color: #444;
+    --epcl-editor-boxes-bg-color: #fff;
+  }
+  .module-about form .inputbox {
+    background: #fff !important;
+  }
+  div.menu-mobile svg {
+    fill: #fff !important;
+  }
+  .kg-bookmark-card .kg-bookmark-container {
+    background-color: #eee !important;
+  }
+  .subscribe-form .description {
+    color: #ddd !important;
+  }
+
 }
 
 /* @end */

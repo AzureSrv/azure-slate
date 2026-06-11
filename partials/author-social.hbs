@@ -1,14 +1,26 @@
 <div class="epcl-author-social">                        
     {{#if twitter}}
         <a href="{{social_url type="twitter"}}" class="twitter tooltip" data-title="{{t 'Follow on {network}' network="Twitter" }}" target="_blank">
-            <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#twitter-icon'}}"></use></svg>
+            <svg class="icon"><use href="#twitter-icon"></use></svg>
             {{t "Twitter"}}
+        </a>
+    {{/if}}
+    {{#if bluesky}}
+        <a href="{{social_url type="bluesky"}}" class="bluesky tooltip" data-title="{{t 'Follow on {network}' network="Bluesky" }}" target="_blank">
+            <svg class="icon" style="fill:#01A6FF;"><use href="#bluesky-icon"></use></svg>
+            {{t "Bluesky"}}
         </a>
     {{/if}}
     {{#if facebook}}
         <a href="{{social_url type="facebook"}}" class="facebook tooltip" data-title="{{t 'Follow on {network}' network="Facebook" }}" target="_blank">
-            <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#facebook-icon'}}"></use></svg>
+            <svg class="icon"><use href="#facebook-icon"></use></svg>
             {{t "Facebook"}}
+        </a>
+    {{/if}}
+    {{#if youtube}}
+        <a href="{{social_url type="youtube"}}" class="youtube tooltip" data-title="{{t 'Subscribe on {network}' network="Youtube" }}" target="_blank">
+            <svg class="icon" style="fill:#F00;"><use href="#youtube-icon"></use></svg>
+            {{t "Youtube"}}
         </a>
     {{/if}}
     {{#if instagram}}
@@ -19,7 +31,7 @@
     {{/if}}
     {{#if website}}
         <a href="{{website}}" class="website tooltip" data-title="{{t 'Website' }}: {{website}}" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <svg class="icon" style="fill:var(--epcl-text-color);"><use href="#website-icon"></use></svg>
             {{t "Website"}}
         </a>
     {{/if}}

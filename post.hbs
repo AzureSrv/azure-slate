@@ -51,17 +51,20 @@
                             <!-- start: .share-buttons -->
                             <div class="share-buttons epcl-social-buttons fill-color">
                                 <h5 class="title usmall fw-semibold">{{t "Share on:"}}</h5>                            
-                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank">
-                                    <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#facebook-icon'}}"></use></svg>
+                                <a class="bluesky" href="https://bsky.app/intent/compose?text={{encode title}}%0A{{url absolute="true"}}" target="_blank">
+                                    <svg class="icon" style="fill:#01A6FF;"><use href="#bluesky-icon"></use></svg>
                                 </a>
-                                <a class="twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" target="_blank">
-                                    <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#twitter-icon'}}"></use></svg>
-                                </a>                        
-                                <a class="whatsapp" href="https://api.whatsapp.com/send?text={{url absolute="true"}}" target="_blank" data-action="share/whatsapp/share">
-                                    <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#whatsapp-icon'}}"></use></svg>
+                                <a class="threads" href="https://www.threads.com/intent/post?text={{encode title}}&url={{url absolute="true"}}" target="_blank">
+                                    <svg class="icon" style="fill:var(--epcl-text-color);"><use href="#threads-icon"></use></svg>
                                 </a>
+                                <a class="reddit" href="https://www.reddit.com/submit?title={{encode title}}&url={{url absolute="true"}}" target="_blank">
+                                    <svg class="icon" style="fill:#FF4500;"><use href="#reddit-icon"></use></svg>
+                                </a>                 
                                 <a class="email" href="mailto:?subject={{encode title}}&body={{url absolute="true"}}" target="_blank">
-                                    <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#email-icon'}}"></use></svg>
+                                    <svg class="icon"><use href="#email-icon"></use></svg>
+                                </a>
+                                <a class="share" onClick="sharePost({url:'{{url absolute="true"}}'})">
+                                    <svg class="icon" style="fill:var(--epcl-text-color);"><use href="#share-icon"></use></svg>
                                 </a>
                                 <div class="clear"></div>
                             </div>
